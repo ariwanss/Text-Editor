@@ -200,9 +200,12 @@ public class TextEditor extends JFrame {
 
         textArea = new JTextArea();
         textArea.setName("TextArea");
+        textArea.setLineWrap(true);
+        textArea.setWrapStyleWord(true);
 
         scrollPane = new JScrollPane(textArea);
         scrollPane.setName("ScrollPane");
+        scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         panel.add(scrollPane, BorderLayout.CENTER);
 
         initializeIcons();
